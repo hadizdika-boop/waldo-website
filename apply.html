@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Apply privately for Waldo Concierge membership in Dubai."
+    />
+    <title>Apply | Waldo Concierge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="apply">
+    <div id="site-header"></div>
+
+    <main>
+      <section class="subhero subhero-apply">
+        <div class="subhero-media" aria-hidden="true">
+          <img src="assets/hero-apply.png" alt="" />
+        </div>
+        <div class="subhero-content" data-reveal>
+          <p class="eyebrow">Apply</p>
+          <h1>Apply for<br /><span class="headline-accent">Waldo Membership.</span></h1>
+          <p>Membership is reviewed privately. Share your details and our team will contact you for an introduction.</p>
+        </div>
+      </section>
+
+      <section class="section apply-layout">
+        <div class="apply-aside" data-reveal>
+          <img src="assets/waldo-logo.png" alt="Waldo Concierge" />
+          <p>Private lifestyle management for elite members in Dubai.</p>
+        </div>
+        <form class="application-form" id="application-form" data-reveal>
+          <label>
+            <span>Full Name</span>
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label>
+            <span>Email Address</span>
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label>
+            <span>Phone Number</span>
+            <input type="tel" name="phone" autocomplete="tel" required />
+          </label>
+          <label>
+            <span>City / Country</span>
+            <input type="text" name="location" autocomplete="address-level2 country-name" required />
+          </label>
+          <label>
+            <span>Preferred Membership</span>
+            <select name="membership" required>
+              <option value="">Select membership</option>
+              <option>Waldo Black — $5,000 / year</option>
+              <option>Waldo Green — $7,000 / year</option>
+            </select>
+          </label>
+          <label>
+            <span>Services Interested In</span>
+            <input type="text" name="services" />
+          </label>
+          <label>
+            <span>Expected Usage Frequency</span>
+            <select name="frequency">
+              <option value="">Select frequency</option>
+              <option>Occasional</option>
+              <option>Monthly</option>
+              <option>Weekly</option>
+              <option>Ongoing lifestyle management</option>
+            </select>
+          </label>
+          <label>
+            <span>Preferred Contact Method</span>
+            <select name="contact-method">
+              <option value="">Select contact method</option>
+              <option>Phone</option>
+              <option>Email</option>
+              <option>WhatsApp</option>
+            </select>
+          </label>
+          <label class="form-wide">
+            <span>Lifestyle Needs / Notes</span>
+            <textarea name="notes" rows="5"></textarea>
+          </label>
+          <div class="form-wide form-footer">
+            <button class="button button-primary" type="submit">Submit Application</button>
+            <p class="form-success" id="form-success" role="status" hidden>
+              Thank you. Your application has been received. A member of the Waldo team will contact you privately.
+            </p>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
