@@ -454,11 +454,11 @@ h2 .headline-accent {
 }
 
 .service-icon {
-  width: 92px;
-  height: 42px;
-  margin: 0 0 14px;
-  opacity: 0.72;
-  filter: grayscale(1) contrast(1.06);
+  width: 128px;
+  height: 52px;
+  margin: 0 0 12px;
+  opacity: 0.78;
+  filter: grayscale(1) contrast(1.08) brightness(1.08);
 }
 
 .service-icon img {
@@ -467,6 +467,14 @@ h2 .headline-accent {
   height: 100%;
   object-fit: contain;
   mix-blend-mode: screen;
+}
+
+.service-strip article:first-child .service-icon {
+  width: 138px;
+}
+
+.service-strip article:last-child .service-icon {
+  width: 126px;
 }
 
 .service-number,
@@ -543,17 +551,32 @@ h2 .headline-accent {
 }
 
 .tier-lines {
-  margin: 36px 0 24px;
-  border-top: 1px solid var(--waldo-line);
+  display: grid;
+  gap: 12px;
+  margin: 36px 0 26px;
 }
 
 .tier-lines div {
+  position: relative;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   gap: 22px;
-  padding: 18px 0;
-  border-bottom: 1px solid var(--waldo-line);
+  padding: 18px 20px;
+  border: 1px solid rgba(244, 241, 234, 0.1);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(23, 107, 98, 0.12), transparent 42%),
+    rgba(244, 241, 234, 0.025);
+  overflow: hidden;
+}
+
+.tier-lines div::after {
+  content: "";
+  position: absolute;
+  inset: 12px auto 12px 0;
+  width: 2px;
+  background: rgba(23, 107, 98, 0.72);
 }
 
 .tier-lines span {
@@ -1473,7 +1496,24 @@ body[data-page="membership"] .subhero-content {
   .tier-lines div {
     align-items: flex-start;
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
+    padding: 20px 20px 20px 22px;
+  }
+
+  .tier-lines {
+    gap: 14px;
+    margin-top: 30px;
+  }
+
+  .membership-preview {
+    padding-bottom: clamp(50px, 14vw, 78px);
+  }
+
+  .site-footer {
+    border-top-color: rgba(244, 241, 234, 0.06);
+    background:
+      linear-gradient(180deg, rgba(5, 6, 7, 0), rgba(5, 6, 7, 0.9) 24%),
+      rgba(5, 6, 7, 0.9);
   }
 
   .subhero {
