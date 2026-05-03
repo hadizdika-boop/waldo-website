@@ -156,11 +156,7 @@ if (document.body.dataset.intro === "true") {
   intro.className = "brand-intro";
   intro.setAttribute("aria-hidden", "true");
   intro.innerHTML = `
-    <div class="intro-diamond"></div>
-    <div class="intro-word">
-      <span class="intro-w">W</span><span class="intro-aldo">ALDO</span>
-    </div>
-    <div class="intro-concierge">CONCIERGE</div>
+    <img class="intro-logo" src="assets/waldo-logo.png" alt="" />
   `;
   document.body.appendChild(intro);
   setTimeout(() => intro.classList.add("intro-complete"), 2200);

@@ -1217,51 +1217,15 @@ body[data-page="membership"] .subhero-content {
   visibility: hidden;
 }
 
-.intro-diamond {
-  width: 30px;
-  height: 50px;
-  margin-bottom: 18px;
-  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-  background: linear-gradient(180deg, #6fa89f, #176b62 48%, #0c3530);
+.intro-logo {
+  position: relative;
+  z-index: 1;
+  width: min(680px, 72vw);
   opacity: 0;
-  animation: introDiamond 700ms ease 160ms forwards;
-}
-
-.intro-word {
-  display: flex;
-  align-items: baseline;
-  color: var(--waldo-ivory);
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(4.6rem, 14vw, 9rem);
-  font-weight: 300;
-  line-height: 0.8;
-}
-
-.intro-w {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(10px);
-  animation: introReveal 780ms ease 600ms forwards;
-}
-
-.intro-aldo {
-  display: inline-block;
-  opacity: 0;
-  transform: translateX(-8px);
-  letter-spacing: 0.22em;
-  animation: introAldo 860ms ease 980ms forwards;
-}
-
-.intro-concierge {
-  margin-top: 20px;
-  color: var(--waldo-teal-accent);
-  font-size: clamp(0.82rem, 2vw, 1.3rem);
-  font-weight: 600;
-  letter-spacing: 0.62em;
-  text-indent: 0.62em;
-  opacity: 0;
-  transform: translateY(8px);
-  animation: introReveal 760ms ease 1420ms forwards;
+  filter: drop-shadow(0 22px 38px rgba(0, 0, 0, 0.55)) drop-shadow(0 0 26px rgba(23, 107, 98, 0.14));
+  mix-blend-mode: screen;
+  transform: translateY(12px) scale(0.975);
+  animation: introLogoReveal 1450ms cubic-bezier(0.19, 1, 0.22, 1) 180ms forwards;
 }
 
 @keyframes backgroundDrift {
@@ -1280,24 +1244,10 @@ body[data-page="membership"] .subhero-content {
   }
 }
 
-@keyframes introDiamond {
+@keyframes introLogoReveal {
   to {
     opacity: 1;
-  }
-}
-
-@keyframes introReveal {
-  to {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-}
-
-@keyframes introAldo {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-    letter-spacing: 0.12em;
+    transform: translateY(0) scale(1);
   }
 }
 
